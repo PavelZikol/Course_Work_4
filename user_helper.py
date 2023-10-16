@@ -1,4 +1,4 @@
-from vacanse_helper import VacancyOperator
+from vacanse_helper import VacancyHelper
 from json_helper import JsonOperator
 
 
@@ -24,7 +24,7 @@ class UserHelper:
 
                 # Вывод полного списка вакансий
                 if chosen_func == "1":
-                    all_vac_inst_1 = VacancyOperator(self.vac_list)
+                    all_vac_inst_1 = VacancyHelper(self.vac_list)
                     all_vac = output_formatting(all_vac_inst_1.get_all_valid_vacancies())
                     for item in all_vac:
                         print(item)
